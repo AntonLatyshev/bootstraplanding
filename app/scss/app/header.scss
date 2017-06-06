@@ -1,0 +1,113 @@
+.header {
+  background-color: #313030;
+  font-family: 'Open Sans', sans-serif;
+  max-width: 1250px;
+  margin: 0 auto;
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  .navbar {
+    margin-bottom: 0;
+    border: 0;
+    ul {
+      text-align: center;
+      float: none;
+      margin-left: -20px;
+      li {
+        display: inline-block;
+        float: none;
+        margin-left: 20px;
+        a {
+          padding: 42px 20px 30px;
+          font-size: 14px;
+          font-weight: 700;
+          text-transform: uppercase;
+          color: #fff;
+          transition: background-color .3s ease-in-out;
+          &:hover,
+          &.active {
+            background-color: $main;
+          }
+        }
+      }
+    }
+  }
+  &__holder {
+    padding: 100px 0 100px;
+  }
+  &__title {
+    height: 140px;
+    overflow: hidden;
+    margin: 0 0 30px;
+    text-transform: uppercase;
+    font-size: 60px;
+    font-weight: 800;
+    color: #000;
+    line-height: 70px;
+    letter-spacing: 2px;
+  }
+  &__text {
+    height: 115px;
+    overflow: hidden;
+    margin: 0 0 20px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #666;
+    font-weight: 400;
+    p {
+      margin: 0;
+    }
+  }
+  &__btn {
+    padding: 10px 60px;
+    color: #fff;
+    font-weight: 700;
+    background-color: $main;
+    border: 2px solid $main;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+    &:hover {
+      background-color: #fff;
+      color: $main;
+      border-color: $main;
+    }
+  }
+  &__video {
+    height: 360px;
+    position: relative;
+    box-shadow: 0 0 100px #999;
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #c4c0b1;
+    &.active {
+      display: none;
+    }
+  }
+  &__video-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -36px 0 0 -36px;
+    i {
+      font-size: 72px;
+      color: #fff;
+      transition: color .3s ease-in-out;
+      &:hover {
+        color: $main;
+      }
+    }
+  }
+}

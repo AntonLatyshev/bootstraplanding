@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include 'head.html' %}
+  <body>
+    <div class="wrapper">
+      <div class="header-block">
+        {% include 'header.html' %}
+        <div class="header__holder">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6">
+                <h1 class="header__title">Our strong organaisation</h1>
+                <div class="header__text">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
+                    quaerat facere eveniet illo consequatur incidunt reiciendis aliquam
+                    repellat eos veniam, dolore vitae blanditiis provident. Laudantium
+                    amet, odit perferendis neque blanditiis.
+                  </p>
+                </div>
+                <div class="btn btn-danger header__btn btn-lg">Contact us</div>
+              </div>
+              <div class="col-lg-6">
+                <div class="header__video">
+                  <div class="header__video-overlay">
+                    <div class="header__video-btn">
+                      <i class="glyphicon glyphicon-play-circle"></i>
+                    </div>
+                  </div>
+                  <iframe src="https://www.youtube.com/embed/Dwzw3hzYcNU" frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% include 'advantages.html' %}
+      <div class="container">
+        <div class="row">
+          <hr>
+        </div>
+      </div>
+      {% include 'feature.html' %}
+      {% include 'team.html' %}
+    </div>
+    {% include 'js.html' %}
+  </body>
+</html>

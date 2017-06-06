@@ -1,0 +1,142 @@
+.team {
+  padding: 100px 0;
+  &__title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #000;
+    opacity: 0.7;
+    text-transform: uppercase;
+    line-height: 48px;
+    margin: 0 0 30px;
+  }
+  &__subtitle {
+    max-width: 500px;
+    position: relative;
+    margin: 0 0 120px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #666;
+    font-weight: 400;
+    &::after {
+      @extend %pseudo;
+      left: 0;
+      bottom: -30px;
+      width: 130px;
+      height: 3px;
+      background-color: #ff3f40;
+    }
+  }
+  &__photo-big {
+    height: 456px;
+    background-color: $bg;
+    overflow: hidden;
+  }
+  &__min-copy {
+    display: block;
+    &.active {
+      display: none;
+    }
+  }
+  &__photo-min {
+    cursor: pointer;
+    position: relative;
+    background-color: $bg;
+    height: 210px;
+    overflow: hidden;
+    text-align: center;
+    img {
+      position: relative;
+      top: 0;
+      left: 50%;
+      margin: 0 0 0 -160px;
+
+    }
+    &__name {
+      visibility: hidden;
+      font-size: 16px;
+      font-weight: 600;
+      position: absolute;
+      text-align: center;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 40px;
+      line-height: 40px;
+      color: #fff;
+      background-color: rgba(0,0,0,0.4);
+      span {
+        opacity: 0;
+      }
+    }
+    &:hover {
+      .team__photo-min__name {
+        visibility: visible;
+        animation: team .3s;
+        span {
+          opacity: 1;
+          animation: name 1s;
+        }
+      }
+    }
+    @keyframes team {
+      from {
+        bottom: 0;
+        left: 0;
+        right: 100%;
+      }
+      to {
+        left: 0;
+        right: 0;
+      }
+    }
+    @keyframes name {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  }
+  &__description {
+    display: none;
+  }
+  &__name {
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 600;
+    color: #000;
+    opacity: 0.6;
+    margin: 0 0 20px;
+  }
+  &__info {
+    font-size: 16px;
+    line-height: 24px;
+    color: #666;
+    font-weight: 400;
+    height: 143px;
+    overflow: hidden;
+    margin: 0 0 10px;
+  }
+  &__social {
+    @extend %clearfix;
+    @extend %clear-list;
+    margin: 0 0 20px -20px;
+  }
+  &__social-item {
+    float: left;
+    margin: 0 0 0 20px;
+  }
+  &__social-link {
+    font-size: 16px;
+    font-style: italic;
+    display: block;
+    color: #666;
+    font-weight: 600;
+    transition: color .3s ease-in-out;
+    &:hover {
+      color: $main;
+      text-decoration: none;
+    }
+  }
+}
