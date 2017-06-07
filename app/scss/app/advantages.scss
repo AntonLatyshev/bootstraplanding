@@ -1,6 +1,23 @@
 .advantages {
   padding: 100px 0;
   font-family: 'Open Sans', sans-serif;
+  @include response(767) {
+    padding: 20px 0;
+  }
+  &__info {
+    @include response(991) {
+      margin: 0 0 20px;
+    }
+  }
+  &__list {
+    margin: -20px 0 0;
+  }
+  &__box {
+    margin: 20px 0 0;
+    // @include response(991) {
+    //   margin: 10px 0;
+    // }
+  }
   &__title {
     font-size: 42px;
     font-weight: 800;
@@ -18,6 +35,9 @@
     line-height: 24px;
     color: #666;
     font-weight: 400;
+    @include response(991) {
+      height: 70px;
+    }
     p {
       margin: 0;
     }
@@ -50,5 +70,8 @@
     @extend .advantages__text;
     margin: 0;
     font-size: 14px;
+    @include response(991) {
+      height: 50px;
+    }
   }
 }

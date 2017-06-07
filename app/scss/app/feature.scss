@@ -1,6 +1,9 @@
 .feature {
   padding: 100px 0;
   font-family: 'Open Sans', sans-serif;
+  @include response(767) {
+    padding: 20px 0;
+  }
   &__title {
     font-size: 42px;
     font-weight: 700;
@@ -36,11 +39,21 @@
     display: inline-block;
     border: 0;
     margin: 0 0 50px;
+    i {
+      text-indent: -9999px;
+      @include response(491) {
+        text-indent: 0px;
+      }
+    }
     > li {
       &.active {
         > .feature__tabs-link {
           color: $main;
           border-color: transparent;
+          text-indent: 0;
+          i {
+            display: none;
+          }
           &:focus {
             color: $main;
             border-color: transparent;
@@ -59,6 +72,16 @@
     &:hover {
       color: $main;
     }
+    @include response(991) {
+      font-size: 16px;
+    }
+    @include response(696) {
+      font-size: 12px;
+      font-weight: 800;
+    }
+    @include response(491) {
+      text-indent: -9999px;
+    }
   }
   &__content {
     margin: -30px 0 0;
@@ -67,6 +90,12 @@
     height: 280px;
     background-color: $bg;
     margin: 30px 0 0;
+    @include response(1199) {
+      height: 220px;
+    }
+    @include response(991) {
+      height: 160px;
+    }
     &--main {
       background-color: $main;
     }
@@ -79,6 +108,11 @@
     &--black {
       background-color: #b0b1b2;
     }
+  }
+}
+.nav>li>a {
+  @include response(591) {
+    padding: 10px 5px;
   }
 }
 .nav>li>a:hover {

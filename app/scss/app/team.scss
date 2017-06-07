@@ -1,5 +1,9 @@
 .team {
   padding: 100px 0;
+  font-family: 'Open Sans', sans-serif;
+  @include response(767) {
+    padding: 20px 0;
+  }
   &__title {
     font-size: 42px;
     font-weight: 700;
@@ -30,6 +34,10 @@
     height: 456px;
     background-color: $bg;
     overflow: hidden;
+    text-align: center;
+    img {
+      display: inline-block;
+    }
   }
   &__min-copy {
     display: block;
@@ -45,7 +53,7 @@
     overflow: hidden;
     text-align: center;
     img {
-      position: relative;
+      position: absolute;
       top: 0;
       left: 50%;
       margin: 0 0 0 -160px;
